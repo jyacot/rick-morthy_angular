@@ -1,0 +1,16 @@
+<form [formGroup]="searchForm">
+  <label for="text"> Búsqueda </label>
+  <input type="text" formControlName="text" placeholder="" />
+</form>
+
+<div class="card-container">
+  <div class="card" *ngFor="let character of characters">
+    <div
+      class="image"
+      [style]="{ 'background-image': 'url(' + character.image + ')' }"
+    ></div>
+    <div class="name">
+      {{ character.name }}
+    </div>
+  </div>
+</div>
